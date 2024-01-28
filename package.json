@@ -3,7 +3,7 @@
   "name": "dub",
   "title": "dub",
   "description": "Creates short url using dub.co",
-  "icon": "command-icon.png",
+  "icon": "dub_logo.png",
   "author": "adelowo",
   "categories": [
     "Productivity"
@@ -14,7 +14,41 @@
       "name": "create",
       "title": "create",
       "description": "Creates a new link",
-      "mode": "view"
+      "mode": "view",
+      "arguments": [
+        {
+          "name": "url",
+          "placeholder": "URL to shorten",
+          "required": true,
+          "type": "text"
+        }
+      ]
+    }
+  ],
+  "preferences": [
+    {
+      "type": "password",
+      "description": "Your API key",
+      "required": true,
+      "name": "apiKey",
+      "title": "API Key"
+    },
+    {
+      "title": "Project slug",
+      "type": "textfield",
+      "description": "The slug for your project",
+      "required": true,
+      "name": "projectSlug",
+      "placeholder": "lanre-shorts"
+    },
+    {
+      "title": "API Base url",
+      "type": "textfield",
+      "description": "The API base url. This defaults to https://api.dub.co",
+      "required": false,
+      "name": "baseURL",
+      "placeholder": "https://api.dub.co",
+      "default": "https://api.dub.co"
     }
   ],
   "dependencies": {
